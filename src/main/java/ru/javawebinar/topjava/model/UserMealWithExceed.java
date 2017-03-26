@@ -38,4 +38,5 @@ public class UserMealWithExceed {
                 ", exceed=" + exceed +
                 '}';
     }
+
 }

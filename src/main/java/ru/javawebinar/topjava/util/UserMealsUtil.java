@@ -36,6 +36,7 @@ public class UserMealsUtil {
 
         List<UserMealWithExceed> userMealWithExceeds = new ArrayList<>();
         //List<LocalDate> allDates = mealList.stream().map(meal -> meal.getDateTime()).map(dateTime -> dateTime.toLocalDate()).distinct().peek(m -> System.out.println(m)).collect(Collectors.toList());
+
         List<LocalDate> allDates = mealList.stream()
                 .map(UserMeal::getDateTime)
                 .map(LocalDateTime::toLocalDate)
