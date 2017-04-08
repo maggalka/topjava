@@ -18,9 +18,10 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class UserServlet extends HttpServlet {
     private static final Logger LOG = getLogger(UserServlet.class);
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        LOG.debug("redirect to users");
-
+        LOG.debug("forward to users");
+        request.getRequestDispatcher("/users.jsp").forward(request, response);
         //request.getRequestDispatcher("/users.jsp").forward(request, response);
         response.sendRedirect("users.jsp");
     }
