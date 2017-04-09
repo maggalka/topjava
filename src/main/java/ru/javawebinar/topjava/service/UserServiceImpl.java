@@ -14,7 +14,7 @@ import static ru.javawebinar.topjava.util.ValidationUtil.checkNotFoundWithId;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+   // @Autowired
     private UserRepository repository;
 
     @Override
@@ -46,4 +46,7 @@ public class UserServiceImpl implements UserService {
     public void update(User user) {
         repository.save(user);
     }
+
+//    public void setRepository(ru.javawebinar.topjava.repository.mock.InMemoryUserRepositoryImpl repository) {
+//    }
 }
